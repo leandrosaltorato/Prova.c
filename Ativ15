@@ -15,14 +15,12 @@ int main() {
             scanf("%f", &numero);
 
             if (numero < 0) {
-                printf("Inválido! Digite um número positivo.\n");
+                printf("inválido! Digite um número positivo.\n");
             }
         } while (numero < 0);
 
         soma += numero;
     }
-
     printf("A soma total dos números é: %.2f\n", soma);
-
     return 0;
 }
