@@ -1,0 +1,61 @@
+#include <stdio.h>
+#include <locale.h>
+int main(){
+    setlocale(LC_ALL,"");
+    int opcao, quantidade, total;
+    total = 0;
+    do {
+        printf("\nSelecione um remédio para comprar:\n");
+        printf("1. Paracetamol - R$ 5,00 \n");
+        printf("2. Ibuprofeno - R$ 7,50 \n");
+        printf("3. Dipirona - R$ 4,00 \n");
+        printf("4. Amoxicilina - R$ 12,00 \n");
+        printf("5. Sair\n");
+        printf("Digite a opção desejada: ");
+        scanf("%d", &opcao);
+        
+        switch (opcao) {
+            case 1: 
+                printf("Informe a quantidade de Paracetamol: ");
+                scanf("%d", &quantidade);
+                total = total + quantidade * 5; 
+                printf("Total atual da compra: R$ %d\n", total);
+                break;
+            case 2: 
+                printf("Informe a quantidade de Ibuprofeno: ");
+                scanf("%d", &quantidade);
+                total = total + quantidade * 7.50; 
+                printf("Total atual da compra: R$ %d\n", total);
+                break;
+            case 3: 
+                printf("Informe a quantidade de Dipirona: ");
+                scanf("%d", &quantidade);
+                total = total + quantidade * 4; 
+                printf("Total atual da compra: R$ %d\n", total);
+                break;
+            case 4: 
+                printf("Informe a quantidade de Amoxicilina: ");
+                scanf("%d", &quantidade);
+                total = total + quantidade * 12;
+                printf("Total atual da compra: R$ %d\n", total);
+                break;
+            case 5: 
+                printf("Total final da compra: R$ %d\n", total);
+                printf("Obrigado pela sua compra!\n");
+                return 0; 
+            default:
+                printf("Opção inválida. Tente novamente.\n");
+        }
+        
+        printf("Deseja continuar comprando? \n ");
+        printf("1. para continuar \n");
+        printf("2. para sair \n");
+        scanf("%d", &opcao); 
+
+    } while (opcao == 1);
+
+    printf("Total final da compra: R$ %d\n", total);
+    printf("Obrigado pela sua compra!\n");
+
+    return 0;
+}
